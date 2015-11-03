@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <style>
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+         </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <script src="cordova.js" id="xdkJScordova_"></script>
+        <script src="js/app.js"></script>
+        <script src="js/init-app.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+        <script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+        <script type="application/javascript" src="console/console_widget.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="google_maps/google_maps.js"></script>
+    </head>
+
+    <body id="afui">
+
+    <div id="googleMap" style="width:480px;height:800px;"></div>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+        document.addEventListener("deviceready", function(){
+            navigator.geolocation.getCurrentPosition(function(position){
+                
+            var mapProp = {center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude), zoom:18, mapTypeId:google.maps.MapTypeId.HYBRID};
+            var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var marker=new google.maps.Marker({position:new google.maps.LatLng(position.coords.latitude,position.coords.longitude)});
+            marker.setMap(map);
+            }, function(error){
+                if(error.code == PositionError.PERMISSION_DENIED)
+                {
+                    alert("App doesn't have permission to use GPS");
+                }
+                else if(error.code == PositionError.POSITION_UNAVAILABLE)
+                {
+                    alert("No GPS device found");
+                }
+                else if(error.code == PositionError.TIMEOUT)
+                {
+                    alert("Its taking too long find user location");
+                }
+                else
+                {
+                    alert("An unknown error occured");
+                }
+            }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+        }, false);
+    </script>
+    </body>
+<div>
+    
+    
+    </div>
+</html>
