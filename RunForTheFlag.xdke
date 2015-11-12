@@ -6,6 +6,7 @@
     "projectDirectories": {},
     "currentService": {
       "service": "github"
-    }
+    },
+    "initialAutoPluginCount": 0
   }
 }

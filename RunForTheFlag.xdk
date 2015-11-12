@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "d7ea1568-9a09-464e-b97b-949ceaa843a4",
-      "lastModifiedDate": 1446557890378,
+      "lastModifiedDate": 1447065901464,
       "creationDate": 1446534460938
     },
     "XDK-app-designer": "true",
@@ -18,24 +18,6 @@
     "serviceMethods": [],
     "cordovaPluginsDirectory": "plugins",
     "cordovaPlugins": [
-      {
-        "id": "cordova-plugin-statusbar",
-        "name": "StatusBar",
-        "version": "1.0.0",
-        "originType": "cordova.io",
-        "origin": "cordova-plugin-statusbar",
-        "gitref": "",
-        "paramvals": {},
-        "selectedState": "Included",
-        "dependsOn": [],
-        "topLevel": true,
-        "cordovaVersion": ">=3.0.0",
-        "permissions": {},
-        "description": "Cordova StatusBar Plugin",
-        "data": {},
-        "dependedBy": [],
-        "checksum": "b4e7aac6"
-      },
       {
         "id": "cordova-plugin-device",
         "version": "1.0.1",
@@ -52,23 +34,6 @@
         "name": "Device",
         "description": "Cordova Device Plugin",
         "checksum": "adfc61ba"
-      },
-      {
-        "id": "cordova-plugin-splashscreen",
-        "version": "2.1.0",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {},
-        "dependsOn": [],
-        "dependedBy": [],
-        "originType": "cordova.io",
-        "origin": "cordova-plugin-splashscreen",
-        "permissions": {},
-        "topLevel": true,
-        "gitref": "",
-        "name": "Splashscreen",
-        "description": "Cordova Splashscreen Plugin",
-        "checksum": "170efb68"
       },
       {
         "id": "cordova-plugin-geolocation",
@@ -102,7 +67,8 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "RunForTheFlag",
@@ -115,13 +81,38 @@
           "intents": [],
           "navigation": []
         },
-        "icons_": [],
+        "icons_": [
+          {
+            "relPath": "images/iconLDPI.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "images/iconMDPI.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "images/iconHDPI.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "images/iconXDPI.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
         "splashes_": [
           {
             "relPath": "images/humanflag.jpg",
-            "density": "hdpi",
-            "height": 640,
-            "width": 480,
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
             "orientation": "portrait"
           },
           {
@@ -129,6 +120,20 @@
             "density": "xhdpi",
             "height": 960,
             "width": 720,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/HumanFlagMDPI.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/HumanFlagHDPI.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
             "orientation": "portrait"
           }
         ],
@@ -161,13 +166,59 @@
           "intents": [],
           "navigation": []
         },
-        "icons_": [],
+        "icons_": [
+          {
+            "relPath": "images/iconLDPI.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "images/iconMDPI.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "images/iconHDPI.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "images/iconXDPI.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
         "splashes_": [
           {
             "relPath": "images/humanflag.jpg",
             "density": "hdpi",
             "height": 640,
             "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/HumanFlagLDPI.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/HumanFlagMDPI.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/HumanFlagXHDPI.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
             "orientation": "portrait"
           }
         ],
@@ -186,7 +237,8 @@
         "name_": "iOS",
         "preferences_": {
           "ios-target": "6",
-          "ios-configuration": "adhoc"
+          "ios-configuration": "adhoc",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "RunForTheFlag",
@@ -216,7 +268,8 @@
         "name_": "Windows8",
         "preferences_": {
           "windows-publisher-display-name": "",
-          "windows-publisher-id": ""
+          "windows-publisher-id": "",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "RunForTheFlag",
@@ -360,5 +413,8 @@
     "gameMetadata": {},
     "projectTags": [],
     "testDirectory": "test"
+  },
+  "editorTab": {
+    "showLiveDevelopmentTasksPanel": true
   }
 }

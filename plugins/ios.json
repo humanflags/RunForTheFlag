@@ -8,8 +8,6 @@
     },
     "installed_plugins": {
         "cordova-plugin-device": {},
-        "cordova-plugin-splashscreen": {},
-        "cordova-plugin-statusbar": {},
         "cordova-plugin-geolocation": {}
     },
     "dependent_plugins": {}
