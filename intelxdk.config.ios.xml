@@ -16,6 +16,7 @@
 <preference name="Fullscreen" value="true"/>
 <!--creationInfo:{"src":"jsapp/template-blank-cordova-ad-project/sample.zip","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
 <preference name="debuggable" value="false"/>
+<preference name="orientation" value="portrait"/>
 <platform name="ios">
     <!-- below requires the splash screen plugin -->
     <!-- docs: https://github.com/apache/cordova-plugin-splashscreen -->
